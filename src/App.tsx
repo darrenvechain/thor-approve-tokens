@@ -1,32 +1,7 @@
 import "./App.css";
-import { useMemo, useState, useEffect } from "react";
+import { useState} from "react";
 import { useWallet, ConnectButtonWithModal } from "@vechain/dapp-kit-react";
 import { useB3tr } from "./useB3tr";
-
-
-const allowanceAbi = {
-  constant: true,
-  inputs: [
-    {
-      name: "owner",
-      type: "address",
-    },
-    {
-      name: "spender",
-      type: "address",
-    },
-  ],
-  name: "allowance",
-  outputs: [
-    {
-      name: "",
-      type: "uint256",
-    },
-  ],
-  payable: false,
-  stateMutability: "view",
-  type: "function",
-};
 
 function App() {
   const wallet = useWallet();
