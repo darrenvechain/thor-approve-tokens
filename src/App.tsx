@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState} from "react";
-import { useWallet, ConnectButtonWithModal } from "@vechain/dapp-kit-react";
+import { useWallet, WalletButton } from "@vechain/dapp-kit-react";
 import { useB3tr } from "./useB3tr";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="card">
-        <ConnectButtonWithModal />
+        <WalletButton />
 
         {wallet.account && (
           <>
