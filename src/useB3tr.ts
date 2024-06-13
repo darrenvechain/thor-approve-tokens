@@ -81,6 +81,9 @@ export const useB3tr = (contractAddress?: string, approveFor?: string) => {
         
         console.log(res);
 
+        // Get the new allowance after 10 seconds
+        new Promise(resolve => setTimeout(resolve, 12000)).then(getAllowance)
+
         return res.txid;
     };
 
